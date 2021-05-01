@@ -1,12 +1,15 @@
 ﻿using System;
 
-namespace LINQapplication
+namespace LINQApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WeekdaysConverting exercise = new WeekdaysConverting();
+            Console.WriteLine("Введите номер задания");
+            string choice = Console.ReadLine();
+            exercise.GetActions(choice);
         }
     }
 }
