@@ -119,9 +119,9 @@ namespace LINQApp
         /// </summary>
         private void GetMinMaxFrequencyLetter()
         {
-            var groupedLetters = GetGroupedLetters();
-            var maxFreq = groupedLetters.OrderBy(x => x.Count).Last();
-            var minFreq = groupedLetters.OrderBy(x => x.Count).First();
+            var groupedByCount = GetGroupedLetters().OrderBy(x => x.Count);
+            var maxFreq = groupedByCount.Last();
+            var minFreq = groupedByCount.First();
             Console.WriteLine("Самая частая буква: {0} - встречается {1} раз(а)", maxFreq.Letter, maxFreq.Count);
             Console.WriteLine("Самая нечастая буква: {0} - встречается {1} раз(а)", minFreq.Letter, minFreq.Count);
         }
